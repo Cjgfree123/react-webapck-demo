@@ -1,11 +1,21 @@
 # react-webpack-demo
 babel-loader8  babel-core7
 
-## 搭建步骤参考
+## 1. 搭建步骤参考
 
 https://www.jianshu.com/p/c53473191910?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=weixin-friends 【简书】
 
 https://www.cnblogs.com/52tech/p/9917661.html 【论坛:babel最新】
+
+## 2.连接 redux
+
+(1) 调整目录结构,调整webpack.config.js路径配置
+
+(2) App -> Router -> Provider
+
+(3) 在middleware文件夹下面,写异步请求action
+
+(4) 封装createStoreWithMiddleWare,生成store
 
 ## 关键
 
@@ -49,3 +59,10 @@ babel-loader@8 requires Babel 7.x (the package '@babel/core')
 use Babel 6.x ('babel-core'), you should install 'babel-loader@7'.
 
 解决:使用最新的babel版本(写法:@babel/)
+
+3.webpack报错:  
+
+webpack 升级Getting error: configuration.resolve.extensions[0] should not be empty
+
+解决: extensions 数组中不能使用空字符串，需要使用* 代替。 如:extensions: [‘*’, ‘js’, ‘ts’]
+
