@@ -17,6 +17,16 @@ https://www.cnblogs.com/52tech/p/9917661.html 【论坛:babel最新】
 
 (4) 封装createStoreWithMiddleWare,生成store
 
+## 3.koa2+mongoose启动服务
+
+(1)src/server.js，编写后台代码,启动服务
+
+(2)src/server文件,编写数据库部分
+
+连接数据库-> 建模、建类 -> 操作数据库
+
+(3)package.json里，自定义命令。 build+start
+
 ## 关键
 
 (1) cnpm install babel-loader @babel/core @babel/preset-env @babel/preset-react -D
@@ -42,7 +52,7 @@ module : {
 }
 ```
 
-## 优化
+## bebel优化
 
 babel-runtime: 模块复用
 

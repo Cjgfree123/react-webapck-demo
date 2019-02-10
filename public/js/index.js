@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import App from './containers/App';
-import test from '../js/middlewares/getTest'; // ??
+import test from '../js/middlewares/getTest'; 
 import reducer from './reducers/index';
 
 // const store = createStore(reducer)
@@ -15,7 +15,7 @@ const store = createStoreWithMiddleWare(reducer);
 
 ReactDOM.render(
     <Provider store={store}>
-        <Router history={hashHistory}>
+        <Router>
             <Route path="/" component={App} />
         </Router>
     </Provider>
